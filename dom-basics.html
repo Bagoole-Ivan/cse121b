@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Week 2</title>
-    <script src="dom-basics.js"></script>
+    
   </head>
   <body>
     <h1>Week 2</h1>
@@ -21,5 +21,20 @@
         <p class="green">This is a paragraph with an class</p>
       </div>
     </section>
+    <script src="dom-basics.js" defer>
+        const newSection = document.createElement("section");
+        const newH2 = document.createElement("h2");
+        newH2.innerText = "CSE 121b";
+        newSection.appendChild(newH2);
+        const newP = document.createElement("p");
+        newH2.innerText = "Welcome to Javascript Language";
+        newSection.appendChild(newP);
+
+        document.body.appendChild(newSection);
+        const newImage = document.createElement("img");
+        newImage.setAttribute("src", "https://picsum.photos/200");
+        newImage.setAttribute("alt", "Description of image");
+        document.body.appendChild(newImage);
+    </script>
   </body>
 </html>
