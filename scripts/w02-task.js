@@ -13,7 +13,7 @@ let profilePicture = 'E:\BYU class\Fall 23\cse121b\images\rsz_ivan_bagoole_-_pic
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('Name');
 
-var elem = document. getElementById("button"); elem. firstChild. innerHTML = "Enable"; 
+var elem = document. getElementById("button"); elem. innerHTML = "Enable"; 
 
 
 /*Above I'm changing the innerHTML of an element.*/
