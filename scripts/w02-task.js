@@ -23,7 +23,8 @@ let foodElement = document.getElementById('food');
 let yearElement = document.querySelector('#year');
 
 /* Step 4 - Adding Content */
-fullName = `<strong>${fullName}</strong>`;
+
+nameElement.innerHTML = "<strong>" + fullName + "</strong>";
 
 document.getElementById('yearElement').textContent = currentYear;
 
