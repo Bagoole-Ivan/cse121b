@@ -13,7 +13,7 @@ var image = document.getElementById('Placeholder image');
 image.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
 
 /* Step 3 - Element Variables */
-let nameElement = document.getElementById('name');
+let nameElement = document.getElementsByClassName("info");
 
 
 /*Above I'm changing the innerHTML of an element.*/
