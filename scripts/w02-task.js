@@ -8,7 +8,7 @@ let fullName = 'Bagoole Ivan';
 
 currentYear = Date.now;
 
-var image = document.getElementById('image');
+var image = document.getElementById('Placeholder image');
 
 image.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
 
