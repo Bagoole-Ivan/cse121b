@@ -4,23 +4,25 @@
 /* Declaring variables for Name, Date, Time and picture */
 
 /* Step 2 - Variables */
-let fullName = 'Bagoole Ivan';
+const fullName = 'Bagoole Ivan';
 
-currentYear = Date.now;
+const currentYear = new Date().getfullYear();
 
-var image = document.getElementById('Placeholder image');
 
-image.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
+imageElement.setAttribute('src', profilePicture);
+var profilePicture = document.getElementById('image');
+
+profilePicture.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
 
 /* Step 3 - Element Variables */
-let nameElement = document.getElementsByClassName("info");
+let nameElement = document.getElementsById("name");
 
 
 /*Above I'm changing the innerHTML of an element.*/
 
-let foodElement = document.getElementById('food');
+const foodElement = document.getElementById('food');
 
-let yearElement = document.querySelector('#year');
+const yearElement = document.querySelector('#year');
 
 /* Step 4 - Adding Content */
 
@@ -30,8 +32,12 @@ document.getElementById('yearElement').textContent = currentYear;
 
 
 /* Step 5 - Array */
-food[4] = {'Meal ': 'Rice ' , 'Source ' : 'Beef ' , 'Desert ' : 'Ice Cream'};
+let foodArray = ['Meal ', 'Rice ' , 'Source ' , 'Beef ' , 'Desert ' , 'Ice Cream'];
+foodElement.textContent = foodArray;
 
+foodElement.innerHTML += `<br>${foodArray}`;
+
+yearElement.textContent = currentYear;
 
 
 
