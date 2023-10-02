@@ -10,9 +10,11 @@ const currentYear = new Date().getfullYear();
 
 
 imageElement.setAttribute('src', profilePicture);
-var profilePicture = document.getElementById('image');
 
 profilePicture.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
+
+var profilePicture = document.getElementById('image');
+
 
 /* Step 3 - Element Variables */
 let nameElement = document.getElementsById("name");
