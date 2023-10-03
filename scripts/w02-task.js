@@ -11,13 +11,12 @@ const currentYear = new Date().getfullYear();
 
 imageElement.setAttribute('src', profilePicture);
 
-profilePicture.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
+let profilePic = profilePicture.src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.png";
 
-var profilePicture = document.getElementById('image');
-
+document.getElementById('home').textContent = profilePic;
 
 /* Step 3 - Element Variables */
-let nameElement = document.getElementsById("name");
+document.getElementsById("name").textContent = fullName;
 
 
 /*Above I'm changing the innerHTML of an element.*/
