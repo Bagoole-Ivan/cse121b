@@ -3,28 +3,40 @@
 /* Profile Object  */
 let myProfile = {
     name: "Ivan Bagoole",
-    photo: src = "E:\BYU class\Fall 23\cse121b\images\ivan_bagoole.jpg",
-    favoriteFoods: ["Rice","Pork","chicken","Potatoes"],
-    hobbies: ["Football","Eating","Singing","Movies"],
-    placesLived: [],
+    photos: src = "https://exploreittechnologies.com/wp-content/uploads/2022/03/Bagoole_Ivan-removebg-preview-1.png",
+    favoriteFoods: [
+        "Rice",
+        "Pork",
+        "chicken",
+        "Potatoes",
+        "Beef"
+    ],
+    hobbies: [
+        "Football",
+        "Eating",
+        "Singing",
+        "Movies"
+    ],
+    placesLived: []
 
 }
 
 /* Populate Profile Object with placesLive objects */
+
 myProfile.placesLived.push(
-    {
-        place: "Kibuli Kampala",
-        length: "2 months",
-    },
-    {
-        place: "Walukuba Jinja",
-        length: "9 months",
-    },
-    {
-        place: "Buwenge Jinja",
-        length: "2 years",
-    }
-);
+        [
+            place = "[Kibuli - Kampala]",
+            length = " - 2 months",
+        ],
+        [    
+            place = "  [Walukuba - Jinja]",
+            length = " - 9 months",
+        ],
+        [    
+            place = "  [Buwenge - Jinja]",
+            length = " - 2 years",
+        ]
+    );
 
 
 
@@ -33,14 +45,14 @@ myProfile.placesLived.push(
 /* Name */
 document.querySelector('#name').textContent = myProfile.name;
 /* Photo with attributes */
-document.getElementById('photo').textContent = myProfile.photo;
+document.getElementById("photo").src = myProfile.photos;
 
 /* Favorite Foods List*/
-document.querySelector('#favorite-foods').textContent = myProfile.favoriteFoods;
+document.getElementById('favorite-foods').textContent = myProfile.favoriteFoods;
 
 /* Hobbies List */
 document.querySelector('#hobbies').textContent = myProfile.hobbies;
 
 /* Places Lived DataList */
-document.querySelector('#places-lived').textContent = myProfile.placesLived;
+document.getElementById('places-lived').textContent = myProfile.placesLived;
 
