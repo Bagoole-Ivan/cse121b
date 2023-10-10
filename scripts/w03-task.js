@@ -2,26 +2,30 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-const add = function (number1, number2){
+function add(number1, number2){
     return number1 + number2;
 }
 
-const addNumbers = function (){
-    let add1 = number(document.getElementById("add1").value);
-    let add2 = number(document.querySelector("#add2").value);
-    document.getElementById("sum").innerHTML = add(add1, add2);
+function addNumbers(){
+    let add1 = Number(document.querySelector("#add1").value);
+    let add2 = Number(document.querySelector("#add2").value);
+
+    document.querySelector("#sum").value = add(add1, add2);
+
 }
 
 document.getElementById("addNumbers").addEventListener("click", addNumbers);
+
+
 /* Function Expression - Subtract Numbers */
-const subtract = function (number1, number2){
+function subtract (number1, number2){
     return number1 - number2;
 }
 
 const subtractNumbers = function (){
-    let subtract1 = number(document.getElementById("subtract1").value);
-    let subtract2 = number(document.querySelector("#subtract2").value);
-    document.getElementById("difference").innerHTML = subtract(subtract1, subtract2);
+    let subtract1 = Number(document.getElementById("subtract1").value);
+    let subtract2 = Number(document.querySelector("#subtract2").value);
+    document.getElementById("difference").value = subtract(subtract1, subtract2);
 }
 
 document.getElementById("subtractNumbers").addEventListener("click", subtractNumbers);
@@ -31,9 +35,9 @@ document.getElementById("subtractNumbers").addEventListener("click", subtractNum
 const multiply = (number1, number2) => number1 * number2;
 
 const multiplyNumbers = function (){
-    let factor1 = number(document.getElementById("factor1").value);
-    let factor2 = number(document.querySelector("#factor2").value);
-    document.getElementById("product").innerHTML = multiply(factor1, factor2);
+    let factor1 = Number(document.getElementById("factor1").value);
+    let factor2 = Number(document.querySelector("#factor2").value);
+    document.getElementById("product").value = multiply(factor1, factor2);
 }
 
 document.getElementById("multiplyNumbers").addEventListener("click", multiplyNumbers);
@@ -45,9 +49,9 @@ function divide(number1, number2){
 }
 
 function divideNumbers(){
-    let dividend = number(document.getElementById("dividend").value);
-    let divisor = number(document.querySelector("#divisor").value);
-    document.getElementById("quotient").innerHTML = divide(dividend, divisor);
+    let dividend = Number(document.getElementById("dividend").value);
+    let divisor = Number(document.querySelector("#divisor").value);
+    document.getElementById("quotient").value = divide(dividend, divisor);
 }
 
 document.getElementById("divideNumbers").addEventListener("click", divideNumbers);
@@ -70,7 +74,6 @@ document.querySelector("#evens").innerHTML = numbersArray.filter(number => numbe
 /* Output Sum of Org. Array */
 document.querySelector("#sumOfArray").innerHTML = numbersArray.reduce((sum, number) => sum + number);
 /* Output Multiplied by 2 Array */
-let numbersArray2 = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26];
-document.querySelector("#multiplied").innerHTML = numbersArray2;
+document.querySelector("#multiplied").innerHTML = numbersArray.map(number => (number*2));
 /* Output Sum of Multiplied by 2 Array */
-document.querySelector("#sumOfMultiplied").innerHTML = numbersArray2.reduce((sum, number) => sum + number);
+document.querySelector("#sumOfMultiplied").innerHTML = numbersArray.reduce(numbersArray.map(number => (number*2)));
