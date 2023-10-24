@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAVE THE CHILDREN BY TEACHING THEM CORRECT PRINCIPALS.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="E:\BYU class\Fall 23\cse121b\Project\styles\main.css">
+</head>
+
+<body>
+  <nav>
+    <ul id="menu">
+      <li><a id="toggleMenu">&equiv;</a></li>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+  </nav>
+  <main id="gridly">
+    <h1>Saving the children.</h1>
+    <h2>Cards showing what we can teach our children to do to gain skills.</h2>
+
+    <select id="sortBy" title="Choose a data filter.">
+      <option value="" disabled selected>Filter Cards</option>
+      <option value="all">Cards</option>
+      <option value="New">Cards</option>
+      <option value="Earlier">Earlier Cards</option>
+      <option value="all">No Filter</option>
+    </select>
+
+    <div id="cards">
+      <img src="https://unesdoc.unesco.org/in/rest/Thumb/image?id=p%3A%3Ausmarcdef_0000141482&title=Children+in+abject+poverty+in+Uganda%3A+a+study+of+criteria+and+status+of+those+in+and+out+of+school+in+selected+districts+in+Uganda&year=2005&TypeOfDocument=UnescoPhysicalDocument&mat=PGD&ct=true&size=256&isPhysical=1&siteId=mainSite" alt="Kampala Uganda" width="200px" height="251px">
+      <img src="https://emergentartspace.org/assets/601130807-P1010369.jpg" alt="Jinja Uganda" width="300px" height="251px">
+      <img src="https://www.end-violence.org/sites/default/files/inline-images/AVSI.jpg" alt="Nakaseke Uganda" width="300px" height="251px">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR00ZfAqf6TbZrIr9wq7Cwubyd5nHz7twcXDA&usqp=CAU" alt="Soroti Uganda">
+      <img src="https://www.globalgiving.org/pfil/25719/pict_large.jpg" alt="Kamuli Uganda" width="300px" height="251px">
+      <img src="https://plan-international.org/tachyon/2022/04/Gender-transformative-education-cover.png" alt="Child Card">
+      
+    </div>
+  </main>
+
+
+  <footer>
+    &copy;<span id="year"></span> | Project - Save the next Generation | CSE 121b
+  </footer>
+  <script src="E:\BYU class\Fall 23\cse121b\Project\scripts\main.js"></script>
+  <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+  </script>
+  <script src="E:\BYU class\Fall 23\cse121b\scripts\save.js"></script>
+</body>
+
+</html>
