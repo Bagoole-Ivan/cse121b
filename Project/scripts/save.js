@@ -32,7 +32,7 @@ const displayCards = (cards) => {
 
 async function getCards() {
 
-    let response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
+    let response = await fetch("https://github.com/Bagoole-Ivan/cse121b/blob/master/Project/images/Pic%204.png");
   
     let cardList = await response.json();
     displayCards(cardList);
