@@ -1,5 +1,16 @@
 /* Final Project Tasks */
 
+
+let myProfile = {
+    name: "Ivan Bagoole",
+    photos: src = "https://github.com/Bagoole-Ivan/cse121b/blob/master/Project/images/Pic%206.jpeg",
+
+/* Name */
+document.querySelector('#name').textContent = myProfile.name;
+/* Photo with attributes */
+document.getElementById("photo").src = myProfile.photos;
+
+
 /* Declaring and initializing global variables */
 const cardsElement = document.querySelector("#cards");
 cardList = [];
