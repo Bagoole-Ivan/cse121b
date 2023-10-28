@@ -3,7 +3,7 @@
 
 let myProfile = {
     name: "Ivan Bagoole",
-    photos: src = "https://github.com/Bagoole-Ivan/cse121b/blob/master/Project/images/Pic%206.jpeg",
+    photos: src = "Project/images/Pic 6.jpeg",
 
 /* Name */
 document.querySelector('#name').textContent = myProfile.name;
@@ -43,7 +43,7 @@ const displayCards = (cards) => {
 
 async function getCards() {
 
-    let response = await fetch("https://github.com/Bagoole-Ivan/cse121b/blob/master/Project/images/Pic%204.png");
+    let response = await fetch("Project/images/Pic 4.png");
   
     let cardList = await response.json();
     displayCards(cardList);
