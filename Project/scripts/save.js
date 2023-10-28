@@ -54,9 +54,14 @@ function sortBy() {
     reset();
     
     let sort = document.getElementById('sortBy');
-  
-    
-    switch(sort(displayCards)) {
+
+    switch(filter(displayCards)) {
+        case "utah":
+            displayCards(
+                cards.filter((card) => card.location.includes("Utah"))
+            );      
+        // code block
+        break;
         
         case all:
             allCards = displayCards(
