@@ -1,7 +1,7 @@
 /* Final Project Tasks */
 
 /* Declaring and initializing global variables */
-const templesElement = document.querySelector("#cards");
+const cardsElement = document.querySelector("#cards");
 cardList = [];
 
 /* async displayCards Function*/ 
@@ -20,7 +20,6 @@ const displayCards = (cards) => {
       h3.innerHTML = card.cardName;
       article.appendChild(h3);
   
-      // - Creates an HTML <img> element and add the card's imageUrl property to the src attribute and the card's cardName property to the alt attribute
       let image = document.createElement('img');
       image.setAttribute('src', card.imageUrl);
       article.appendChild(image);
@@ -31,12 +30,10 @@ const displayCards = (cards) => {
 
 };
 
-/* async getTemples Function using fetch()*/
 async function getCards() {
 
     let response = await fetch("https://byui-cse.github.io/cse121b-ww-course/resources/temples.json");
   
-    // Step 5: Convert your fetch response into a Javascript object ( hint: .json() ). Store this in the cardList variable. 
     let cardList = await response.json();
     displayCards(cardList);
   
@@ -44,10 +41,8 @@ async function getCards() {
   
 
 
-  // Step 6: Finally, call the output function and pass it the list of cards. 
   getCards(cardList);
   
-  // Step 7: Declare a function named reset that clears all of the <article> elements from the HTML element with an ID of temples
   function reset() {
     return document.getElementById('cards').innerHTML = '';
   };
@@ -64,7 +59,7 @@ function sortBy() {
     switch(sort(displayCards)) {
         
         case all:
-            allTemples = displayCards(
+            allCards = displayCards(
                 cards
             );
 
