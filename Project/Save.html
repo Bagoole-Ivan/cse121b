@@ -1,54 +1,92 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAVE THE CHILDREN BY TEACHING THEM CORRECT PRINCIPALS.</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="E:\BYU class\Fall 23\cse121b\Project\styles\main.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="Project/styles/main.css">
 </head>
 
 <body>
-  <nav>
-    <ul id="menu">
-      <li><a id="toggleMenu">&equiv;</a></li>
-      <li><a href="index.html">Home</a></li>
-    </ul>
-  </nav>
-  <main id="gridly">
-    <h1>Saving the children.</h1>
-    <h2>Cards showing what we can teach our children to do to gain skills.</h2>
-
-    <select id="sortBy" title="Choose a data filter.">
-      <option value="" disabled selected>Filter Cards</option>
-      <option value="all">Cards</option>
-      <option value="New">Cards</option>
-      <option value="Earlier">Earlier Cards</option>
-      <option value="all">No Filter</option>
-    </select>
-
-    <H1>THIS IS A CHILDREN'S CHANNEL</H1>
-    <break></break>
-    <p>We would like you to learn morrows that will help you become better people and Citizens. Come let us learn together.</p>
-
-    <div id="photo">
+  <div id="canvas">
+    <h1 id="heading">Let's Play Scramble</h1>
+    <p id="text1" style="font-size:36px">hposupaomtip</p>
+    <input type="text" id="input0" placeholder="Type the correct word here:">
+    <div id="buttons">
+      <button id="button0">Check</button>
     </div>
-    <div id = "card"></div>
-  </main>
+  </div>
 
-
-  <footer>
-    &copy;<span id="year"></span> | Project - Save the next Generation | CSE 121b
-  </footer>
-  <script src="E:\BYU class\Fall 23\cse121b\Project\scripts\main.js"></script>
   <script>
-    document.getElementById("year").innerHTML = new Date().getFullYear();
-  </script>
-  <script src="E:\BYU class\Fall 23\cse121b\scripts\save.js"></script>
-</body>
+    var words = ["hippopotamus",
+                 "butterflies",
+                 "puppies",
+                 "orangutan",
+                 "buffalo",
+                 "penguin"
+                ];
 
+
+    function randomWord(array) {
+      var num = Math.floor((Math.random() * array.length) + 1);
+      return array[num];
+    } ;
+
+    var word = randomWord(words);
+    var mixed = scramble(word);
+    var jumbled = addText(mixed);
+
+
+    $("#button0").click(check);
+
+
+    var click = function(uniqueId, someFunction) {
+        startPromise.then(function(){
+            $("#" + uniqueId).off();
+            $("#" + uniqueId).click(() => { someFunction(uniqueId) });
+        });
+    }
+
+
+    function addText(text){
+        var existingText = $("#text1").html(text);
+        return existingText;
+    };
+
+
+    function scramble(word) {
+        var scrambledArray = [];
+        word = word.split('');
+        while(word.length > 0) {
+            var maxIndex = word.length;
+            var randomIndex = Math.floor(Math.random()*maxIndex);
+            scrambledArray.push(word[randomIndex])
+            word.splice(randomIndex, 1)
+        }
+        return scrambledArray.join('');
+    }
+
+
+    function check() {
+        var answer = $("#input0").val();
+        if(answer == word) {
+            alert("Correct answer.");
+            newWord();
+        } else {
+            alert("Incorrect answer. Try again!");
+        }
+        console.log("checking");
+    }
+
+    
+    function newWord() {
+      word = randomWord(words);
+      var scrambled = scramble(word);
+      addText(scrambled); 
+      $("#input0").val("");
+    }
+
+
+  </script>
+  <script type="application/javascript" src="Project/scripts/save.js"></script>
+  <script type="application/javascript" src="Project/scripts/new.js"></script>
 </html>
